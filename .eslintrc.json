@@ -3,7 +3,13 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["standard-with-typescript", "plugin:vue/vue3-recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "standard-with-typescript"
+  ],
   "parserOptions": {
     "project": "./tsconfig.json",
     "ecmaVersion": "latest",
@@ -11,7 +17,6 @@
   },
   "plugins": ["vue"],
   "rules": {
-    "vue/attribute-hyphenation": "warn",
-    "vue/html-indent": ["error", 2]
+    "vue/attribute-hyphenation": "warn"
   }
 }
