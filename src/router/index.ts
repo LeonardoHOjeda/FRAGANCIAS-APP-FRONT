@@ -23,6 +23,20 @@ const routes = [
     meta: {
       title: 'Productos'
     }
+  },
+  {
+    path: '/iniciar-sesion',
+    component: async () => await import('@/views/auth/LoginPage.vue'),
+    meta: {
+      title: 'Iniciar Sesion'
+    }
+  },
+  {
+    path: '/crear-cuenta',
+    component: async () => await import('@/views/auth/SignUpPage.vue'),
+    meta: {
+      title: 'Iniciar Sesion'
+    }
   }
 ]
 

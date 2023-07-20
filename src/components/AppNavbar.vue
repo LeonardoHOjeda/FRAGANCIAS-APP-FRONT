@@ -26,12 +26,20 @@
             <button
               class="text-black bg-white hover:bg-gray-200 transition duration-200 rounded-md px-5 py-2.5 mr-2 mb-2"
             >
-              Crear Cuenta
+              <router-link to="/crear-cuenta" class="custom-link"
+                >Crear Cuenta</router-link
+              >
             </button>
             <button
               class="text-white bg-blue-700 hover:bg-blue-800 rounded-md px-5 py-2.5 mr-2 mb-2"
+              :class="{ 'router-link-exact-active': false }"
             >
-              Iniciar Sesion
+              <router-link
+                to="/iniciar-sesion"
+                class="custom-link"
+                :class="{ 'router-link-exact-active': false }"
+                >Iniciar Sesion</router-link
+              >
             </button>
           </div>
         </div>
@@ -46,5 +54,11 @@
 a.router-link-exact-active {
   color: rgb(29 78 216);
   border-radius: 0.25rem;
+}
+.custom-link {
+  color: inherit;
+}
+a.router-link-active.custom-link {
+  color: inherit;
 }
 </style>
